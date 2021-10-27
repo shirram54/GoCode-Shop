@@ -15,9 +15,10 @@ nav {
 }
 
 h1 {
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 40px;
+  font-weight: bolder;
   flex: 1;
+  color: black;
 }
 
 .sort {
