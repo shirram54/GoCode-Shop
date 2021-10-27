@@ -10,7 +10,7 @@ import { useState } from 'react/cjs/react.development';
 
 function App() {
 
-  let productsDetails = [
+  const productsDetails = [
     {
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -253,15 +253,16 @@ function App() {
     }
   ]
 
+  const categories = productsDetails.map(p => p.category).filter((value, index, array) => array.indexOf(value) === index);
+  console.log(categories);
+
+
   return (
     <div>
 
-      <Header />
+      <Header categories={categories} />
       <Counter />
       <Products productsDetails={productsDetails} />
-
-
-
 
     </div>
   );

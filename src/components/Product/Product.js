@@ -13,6 +13,7 @@ function Product({ title, price, image }) {
             <div className="product-info">
                 <h5>{title}</h5>
                 <h6>${price}</h6>
+
             </div>
         </div>
     );
