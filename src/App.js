@@ -252,15 +252,16 @@ const initProducts = [
 ];
 
 function App() {
-  const [productsDetails, setProductsDetails] = useState(initProducts);
+  const [products, setProducts] = useState(initProducts);
+
   const categories = initProducts.map(p => p.category).filter((value, index, array) => array.indexOf(value) === index);
 
   const handleChange = (e) => {
     if (e.target.value === 'all') {
-      setProductsDetails(initProducts);
+      setProducts(initProducts);
     } else {
-      const filterCategories = initProducts.filter((product) => product.category === e.target.value);
-      setProductsDetails(filterCategories);
+      const filterProducts = initProducts.filter((product) => product.category === e.target.value);
+      setProducts(filterProducts);
     }
   };
 
@@ -271,7 +272,7 @@ function App() {
 
       <Header categories={categories} handleChange={handleChange} />
       <Counter />
-      <Products productsDetails={productsDetails} />
+      <Products products={products} />
 
     </div>
   );
