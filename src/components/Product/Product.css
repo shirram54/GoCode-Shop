@@ -1,7 +1,7 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    height: 405px;
+    height: 410px;
     padding: 2%;
     flex: 1 16%;
     background-color: #fff;
@@ -27,41 +27,21 @@
   }
     
 
-  /* .re1{
+  .re1{
     background-color: white;
     color: black;
-    width: 100px;
-    height: 30px;
-    font-size: 10px;
-    margin-right: 17px;
-    margin-left: -30px;
-   border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-  } */
- 
- /* .emz {
-   margin-left: -10px;
-   margin-right: 2px;
- } */
+ } 
   
+
   
-  /* .re2 {
+  .re2 {
     background-color:black;
     color: white;
-    border: white;
-    width: 100px;
-    height: 30px;
-    font-size: 10px;
-    margin-right: -20px;
-    margin-left: 2px;
-   
+    border-radius: 5px;
     cursor: pointer;
-margin-top: 10px;
-  } */
-
-
-
+  } 
 
 
 
