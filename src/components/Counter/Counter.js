@@ -7,8 +7,8 @@ function Counter() {
 
     return (
         <div className="App">
-            <button className="btn" onClick={() => setCount(!count)}>Click me</button>
-            {count && <div>you clicked the button!</div>}
+            <button className="btn" onClick={() => setCount(!count)}>Welcome msg</button>
+            {count && <div>Welcome to GoCode Shop</div>}
         </div>
     );
 }

@@ -1,7 +1,10 @@
+
 import Product from "../Product/Product";
 import './Products.css';
 
 function Products({ products }) {
+
+
     return (
         <section className="products">
             {products.map(({ id, title, price, description, category, image, rating, rate, count }) => (

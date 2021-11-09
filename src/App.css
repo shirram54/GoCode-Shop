@@ -78,7 +78,7 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
+  margin: 7px;
   padding: 0;
   border: 0;
   outline: 0;
@@ -144,10 +144,13 @@ table {
 
 body {
   margin: 0 auto;
+  
+  align-items: center;
   width: 90%;
+
   max-width: 1240px;
-  font-family: "Roboto", sans-serif;
-  background-color: #f6f6f6;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
 }
 
 
@@ -188,9 +191,21 @@ h6 {
     margin-bottom: 20px;
   }
 
+  
  
 
   .sort {
     align-self: flex-start;
   }
+}
+
+a{
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  background-color: #ff70ac;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
 }
