@@ -1,106 +1,89 @@
-
-import { useState, useContext, useEffect } from 'react';
-import CartContext from '../../CartContext';
-import './Product.css';
-import TotalContext from '../../TotalContext';
-
-
+import { useState, useContext, useEffect, useCallback } from "react";
+import CartContext from "../../CartContext";
+import "./Product.css";
+import TotalContext from "../../TotalContext";
 
 function Product({ title, price, image, id }) {
-    const [carts, setCarts] = useContext(CartContext);
-    const [product, setProduct] = useState(0);
-    const [total, setTotal] = useContext(TotalContext);
+  const [carts, setCarts] = useContext(CartContext);
+  const [product, setProduct] = useState(0);
+  const [total, setTotal] = useContext(TotalContext);
 
+  const addProduct = useCallback(() => {
+    setProduct(product + 1);
 
-
-    const addProduct = () => {
-        setProduct(product + 1);
-
-        const currentProduct = carts[id] || { amount: product, title: title, price: price, image: image };
-        currentProduct.amount = currentProduct.amount + 1;
-        const newCarts = { ...carts, [id]: currentProduct };
-        setCarts(newCarts);
+    const currentProduct = carts[id] || {
+      amount: product,
+      title: title,
+      price: price,
+      image: image,
     };
+    currentProduct.amount = currentProduct.amount + 1;
+    const newCarts = { ...carts, [id]: currentProduct };
+    setCarts(newCarts);
+  }, [carts, id, image, price, product, setCarts, title]);
 
+  const removeProduct = () => {
+    product > 0 && setProduct(product - 1);
 
+    let newCart;
 
-    const removeProduct = () => {
-        product > 0 && setProduct(product - 1);
+    const currentProduct = carts[id];
 
-        let newCart;
+    if (!currentProduct) return;
 
-        const currentProduct = carts[id];
+    currentProduct.amount = currentProduct.amount - 1;
 
-        if (!currentProduct) return;
+    if (currentProduct.amount === 0) {
+      newCart = { ...carts };
+      delete newCart[id];
+    } else {
+      newCart = { ...carts, [id]: currentProduct };
+    }
 
-        currentProduct.amount = currentProduct.amount - 1;
+    setCarts(newCart);
+  };
 
-        if (currentProduct.amount === 0) {
-            newCart = { ...carts };
-            delete newCart[id];
-        } else {
-            newCart = { ...carts, [id]: currentProduct };
-        }
+  const getTotal = (cart) => {
+    return Object.entries(cart).reduce((acc, item) => {
+      const amount = item[1].amount;
+      return acc + amount;
+    }, 0);
+  };
 
-        setCarts(newCart);
-    };
+  useEffect(() => {
+    if (!carts) {
+      setProduct(0);
+    }
+  }, [carts]);
 
+  useEffect(() => {
+    if (addProduct) {
+      setTotal(getTotal(carts));
+    }
+  }, [addProduct, carts, setTotal]);
 
+  return (
+    <div className="product-card">
+      <div className="product-image">
+        <img src={image} alt="shir" />
+      </div>
 
+      <div className="product-info">
+        <h5>{title}</h5>
+        <h6>${price}</h6>
 
-    const getTotal = (cart) => {
-        return Object.entries(cart).reduce((acc, item) => {
-            const amount = item[1].amount;
-            return acc + amount;
-        }, 0);
-    };
-
-
-    useEffect(() => {
-        if (!carts) {
-            setProduct(0);
-        }
-    }, [carts]);
-
-
-    useEffect(() => {
-        if (addProduct) {
-            setTotal(getTotal(carts));
-        }
-    }, [carts]);
-
-
-
-
-
-    return (
-
-        <div className="product-card">
-            <div className="product-image">
-                <img
-                    src={image}
-                />
-            </div>
-
-            <div className="product-info">
-
-                <h5>{title}</h5>
-                <h6>${price}</h6>
-
-
-                <button className="re1" onClick={removeProduct} > - </button>
-                <span className="emz"> {product} </span>
-                <button className="re2" onClick={addProduct} > + </button>
-
-
-
-            </div>
-        </div >
-    );
+        <button className="re1" onClick={removeProduct}>
+          {" "}
+          -{" "}
+        </button>
+        <span className="emz"> {product} </span>
+        <button className="re2" onClick={addProduct}>
+          {" "}
+          +{" "}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Product;
-
-
-
-
