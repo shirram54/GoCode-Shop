@@ -1,10 +1,19 @@
 import Product from "../Product/Product";
 import "./Products.css";
 
-function Products({ products }) {
+function Products({ products, category, price }) {
+  console.log("category", category);
+  console.log("price", price);
+  const filteredProducts = products.filter(
+    (product) =>
+      product.price >= price[0] &&
+      product.price <= price[1] &&
+      (category === "all" || product.category === category)
+  );
+
   return (
     <section className="products">
-      {products.map(
+      {filteredProducts.map(
         ({
           id,
           title,
