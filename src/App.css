@@ -1,6 +1,3 @@
-
-
-
 html,
 body,
 div,
@@ -144,15 +141,14 @@ table {
 
 body {
   margin: 0 auto;
-  
+
   align-items: center;
   width: 90%;
 
   max-width: 1240px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(255, 255, 255);
 }
-
 
 h5 {
   font-weight: 500;
@@ -165,9 +161,6 @@ h6 {
 }
 
 /* Product Layout */
-
-
-
 
 @media (max-width: 920px) {
   .product-card {
@@ -191,15 +184,12 @@ h6 {
     margin-bottom: 20px;
   }
 
-  
- 
-
   .sort {
     align-self: flex-start;
   }
 }
 
-a{
+a {
   width: 250px;
   height: 60px;
   text-align: center;
