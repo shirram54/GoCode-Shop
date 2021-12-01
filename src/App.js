@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
       <CartContext.Provider value={[carts, setCarts]}>
         <TotalContext.Provider value={[total, setTotal]}>
           <PriceContext.Provider value={[minMax, setMinMax, price, setPrice]}>
