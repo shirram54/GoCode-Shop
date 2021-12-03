@@ -1,0 +1,13 @@
+.productimg img {
+  height: 300px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+h2,
+h4,
+h2 {
+  text-align: center;
+}

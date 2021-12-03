@@ -15,7 +15,7 @@ function Products({ products, category, price }) {
     <section className="products">
       {filteredProducts.map(
         ({
-          id,
+          _id: id,
           title,
           price,
           description,

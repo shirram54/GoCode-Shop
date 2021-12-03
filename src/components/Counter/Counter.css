@@ -2,32 +2,33 @@
   padding: 5px 20px;
   text-align: center;
   text-decoration: none;
-  font-family: "Rancho", cursive;
 
   font-size: 16px;
   font-weight: bolder;
   cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 2px solid white;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
   transition-duration: 0.4s;
   border-radius: 10px;
   margin-top: -100px;
-
-  margin-left: 25px;
+  margin-left: 750px;
 }
 
 .btn:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .App {
   font-weight: bolder;
   padding-top: -40px;
-  font-family: "Rancho", cursive;
 }
 
 div {
   margin-bottom: 30px;
+}
+
+.di {
+  margin-left: 660px;
 }

@@ -2,6 +2,7 @@ import { useState, useContext, useEffect, useCallback } from "react";
 import CartContext from "../../CartContext";
 import "./Product.css";
 import TotalContext from "../../TotalContext";
+import { Link } from "react-router-dom";
 
 function Product({ title, price, image, id }) {
   const [carts, setCarts] = useContext(CartContext);
@@ -69,7 +70,10 @@ function Product({ title, price, image, id }) {
       </div>
 
       <div className="product-info">
-        <h5>{title}</h5>
+        <Link to={`/productdetails/${id}`}>
+          <h5>{title}</h5>
+        </Link>
+
         <h6>${price}</h6>
 
         <button className="re1" onClick={removeProduct}>
