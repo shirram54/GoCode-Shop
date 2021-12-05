@@ -5,8 +5,11 @@
   padding: 2%;
   flex: 1 16%;
   background-color: #fff;
-  box-shadow: 0px 0px 1px 0.5px rgb(143, 16, 143);
+  box-shadow: 0px 0px 1px -0.2px black;
   align-items: center;
+  font-family: "sans-serif";
+  font-style: italic;
+  font-size: 17px;
 }
 
 .product-image img {

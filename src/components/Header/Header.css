@@ -20,12 +20,13 @@ nav {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.coteret {
   font-size: 45px;
   font-weight: bolder;
   display: flex;
   align-self: center;
-  font-family: "Dancing Script", cursive;
+  font-family: "sans-serif";
+  font-style: italic;
   width: auto;
   color: black;
 }
@@ -33,15 +34,23 @@ h1 {
 .sort {
   display: flex;
   align-self: center;
-  /* margin-top: 20px; */
 }
 
 .top-text {
   text-align: center;
   top: -8px;
-  left: 0;
-  background-color: rgb(158, 42, 158);
+  height: 50px;
+  background-color: #feaebb;
   width: 100vw;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: "Comforter Brush", cursive;
+  font-family: "Dancing Script", cursive;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 30px;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .slide {
@@ -113,4 +122,11 @@ label {
 .cart-button:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.instaicon {
+  height: 27px;
+  width: 27px;
+  display: inline;
+  vertical-align: middle;
 }

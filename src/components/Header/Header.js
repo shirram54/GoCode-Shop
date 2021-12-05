@@ -1,7 +1,7 @@
 import "./Header.css";
 import "../Cart/Cart.css";
 import Cart from "../Cart/Cart";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import TotalContext from "../../TotalContext";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Drawer } from "@mui/material";
 import CartContext from "../../CartContext";
+import { color } from "@mui/system";
 
 function Header({ categories, handleCategoryChange, handlePriceChange }) {
   const [showCart, setShowCart] = useState(false);
@@ -46,14 +47,23 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
 
   const handleChange = (event, newValue) => handlePriceChange(newValue);
 
+  console.log(minMax);
+  console.log(price);
+
   return (
     <>
       <div className="top-text">
-        20% OFF ALL COATS % JACKETS! <br /> With code: OUTERWEAR
+        {" "}
+        <img
+          className="instaicon"
+          src="https://cdn.shopify.com/s/files/1/0837/2829/files/Group.png?v=1609161773"
+          alt="intagram"
+        ></img>
+        GoCode Shop fashion
       </div>
 
       <nav>
-        <h1>GoCode Shop</h1>
+        <h1 className="coteret">GoCode Shop</h1>
 
         <div className="sort">
           <div className="collection-sort">
@@ -119,13 +129,13 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
       <div className="slide">
         <Box sx={{ width: 350 }}>
           <Slider
+            sx={{ color: "#feaebb" }}
             min={minMax[0]}
             max={minMax[1]}
             getAriaLabel={() => "Price range"}
             value={price}
             onChange={handleChange}
             valueLabelDisplay="auto"
-            color="secondary"
           />
           Your range of Price is between {price[0]} to {price[1]}
         </Box>

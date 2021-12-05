@@ -198,3 +198,24 @@ a {
   font-weight: bold;
   font-size: 20px;
 } */
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:visited {
+  color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Comforter Brush", cursive;
+  font-family: "Dancing Script", cursive;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-family: "Open Sans Condensed", sans-serif;
+}

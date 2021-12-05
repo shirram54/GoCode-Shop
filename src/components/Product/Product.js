@@ -71,10 +71,10 @@ function Product({ title, price, image, id }) {
 
       <div className="product-info">
         <Link to={`/productdetails/${id}`}>
-          <h5>{title}</h5>
+          <h5 className="coter"> {title}</h5>
         </Link>
 
-        <h6>${price}</h6>
+        <h6 className="price">${price}</h6>
 
         <button className="re1" onClick={removeProduct}>
           {" "}

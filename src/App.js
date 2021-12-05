@@ -9,11 +9,10 @@ import ProductDetails from "./pages/ProductDetails";
 function App() {
   return (
     <div>
-      <Link to="/">Home</Link>
-      <br />
-      <Link to="/about">About</Link>
-      <br />
-      <br />
+      <div className="cen">
+        <Link to="/">Home page</Link>
+        <Link to="/about">About our shop</Link>
+      </div>
       <Counter />
       <Routes>
         <Route path="/" element={<Home />} />
