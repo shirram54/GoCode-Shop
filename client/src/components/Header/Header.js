@@ -137,7 +137,10 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
             onChange={handleChange}
             valueLabelDisplay="auto"
           />
-          Your range of Price is between {price[0]} to {price[1]}
+          <div className="textslide">
+            {" "}
+            Your range of Price is between {price[0]} to {price[1]}
+          </div>
         </Box>
       </div>
     </>

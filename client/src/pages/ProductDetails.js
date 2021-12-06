@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { height } from "@mui/system";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -27,24 +28,22 @@ function ProductDetails() {
       <br />
       <div className="card">
         {product && (
-          <Card sx={{ maxWidth: 1000 }}>
+          <card>
             <CardMedia
-              className="cenmed"
-              sx={{ width: 300, objectFit: "cover", height: 400 }}
+              sx={{ width: 300, objectFit: "scale-down", height: 400 }}
               component="img"
-              height="400"
               image={product.image}
               alt="img"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                {product.title}
+                <div className="titlefont">{product.title}</div>
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                ${product.price}
+                <div className="pricefont"> ${product.price}</div>
               </Typography>
             </CardContent>
-          </Card>
+          </card>
         )}
       </div>
     </>
