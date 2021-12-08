@@ -17,9 +17,11 @@ const Product = mongoose.model("Product", {
 
 const app = express();
 
+app.use(express.static("client/build"));
+
 app.use(express.json());
 
-app.get("/products", async (req, res) => {
+app.get("/api/products", async (req, res) => {
   const { term } = req.query;
   try {
     // const data = await readFile("./products.json", "utf8");
@@ -36,7 +38,7 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.get("/products/:id", async (req, res) => {
+app.get("/api/products/:id", async (req, res) => {
   const { id } = req.params;
   try {
     // const data = await readFile("./products.json", "utf8");
@@ -48,7 +50,7 @@ app.get("/products/:id", async (req, res) => {
   }
 });
 
-app.post("/products", async (req, res) => {
+app.post("/api/products", async (req, res) => {
   const { title } = req.body;
   // const data = await readFile("./products.json", "utf8");
   // const products = JSON.parse(data);
@@ -66,7 +68,7 @@ app.post("/products", async (req, res) => {
   res.send(product);
 });
 
-app.delete("/products/:id", async (req, res) => {
+app.delete("/api/products/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const product = await Product.findByIdAndDelete(id);
@@ -81,7 +83,7 @@ app.delete("/products/:id", async (req, res) => {
   }
 });
 
-app.put("/products/:id", async (req, res) => {
+app.put("/api/products/:id", async (req, res) => {
   const { id } = req.params;
   const body = req.body;
   const product = await Product.findOneAndUpdate(id, body);
@@ -112,6 +114,10 @@ async function initProducts() {
     // await writeFile("./products.json", JSON.stringify(mappedProducts));
   }
 }
+
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/client/build/index.html");
+});
 
 const { DB_USER, DB_PASS, DB_HOST, DB_NAME } = process.env;
 

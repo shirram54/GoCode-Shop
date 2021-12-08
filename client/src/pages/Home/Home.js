@@ -16,7 +16,7 @@ function Home() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetch("/products")
+    fetch("/api/products")
       .then((response) => response.json())
       .then((data) => {
         setInitProducts(data);

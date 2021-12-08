@@ -70,7 +70,7 @@ function Product({ title, price, image, id }) {
       </div>
 
       <div className="product-info">
-        <Link to={`/productdetails/${id}`}>
+        <Link to={`/products/${id}`}>
           <h5 className="coter"> {title}</h5>
         </Link>
 

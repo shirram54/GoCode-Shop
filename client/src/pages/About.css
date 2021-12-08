@@ -1,5 +1,4 @@
 .abocen {
-  text-align: center;
   font-family: "Comforter Brush", cursive;
   font-family: "Dancing Script", cursive;
   font-family: "Fuzzy Bubbles", cursive;
@@ -23,4 +22,8 @@ img {
 
 .purple {
   color: #feaebb;
+}
+
+.paragraph {
+  text-align: left;
 }

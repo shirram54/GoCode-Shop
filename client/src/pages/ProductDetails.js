@@ -15,7 +15,7 @@ function ProductDetails() {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch(`/products/${id}`)
+    fetch(`/api/products/${id}`)
       .then((res) => res.json())
       .then((product) => setProduct(product));
   }, [id]);
@@ -30,7 +30,12 @@ function ProductDetails() {
         {product && (
           <card>
             <CardMedia
-              sx={{ width: 300, objectFit: "scale-down", height: 400 }}
+              sx={{
+                width: 300,
+                objectFit: "scale-down",
+                height: 400,
+                margin: "0 auto",
+              }}
               component="img"
               image={product.image}
               alt="img"
