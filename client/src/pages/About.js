@@ -11,10 +11,8 @@ function About() {
         and from all over the world.
         <br />
         <br />
-        What is hot today can be worn tomorrow.
-        <br />
-        <br />
-        No need to wait. Do not need favors.
+        What is hot today can be worn tomorrow. No need to wait. Do not need
+        favors.
         <br />
         <br />
         GoCode Shop lands you in the heart of the fashion world. You are welcome
