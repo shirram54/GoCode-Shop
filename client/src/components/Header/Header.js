@@ -1,7 +1,6 @@
 import "./Header.css";
 import "../Cart/Cart.css";
-import Cart from "../Cart/Cart";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import TotalContext from "../../TotalContext";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
@@ -52,19 +51,11 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
   return (
     <>
       <div className="top-text">
-        {" "}
-        {/* <img
-          className="instaicon"
-          src="https://cdn.shopify.com/s/files/1/0837/2829/files/Group.png?v=1609161773"
-          alt="intagram"
-        ></img> */}
         TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS
         TEZENIS TEZENIS TEZENIS
       </div>
 
       <nav>
-        {/* <h1 className="coteret">Tezenis</h1> */}
-
         <div className="sort">
           <div className="collection-sort">
             <select className="select" onChange={handleCategoryChange}>
@@ -76,20 +67,6 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
               ))}
             </select>
           </div>
-
-          {/* <div className="collection-sort">
-            <label>Sort by:</label>
-            <select>
-              <option value="/">Featured</option>
-              <option value="/">Best Selling</option>
-              <option value="/">Alphabetically, A-Z</option>
-              <option value="/">Alphabetically, Z-A</option>
-              <option value="/">Price, low to high</option>
-              <option value="/">Price, high to low</option>
-              <option value="/">Date, new to old</option>
-              <option value="/">Date, old to new</option>
-            </select>
-          </div> */}
         </div>
 
         <React.Fragment key={"left"}>
@@ -122,7 +99,6 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
             </Box>
           </Drawer>
         </React.Fragment>
-        {/* {showCart && <Cart />} */}
       </nav>
 
       <div className="slide">

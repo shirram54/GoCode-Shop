@@ -5,13 +5,11 @@
   padding: 2%;
   flex: 1 20%;
   background-color: #fff;
-  /* box-shadow: 0px 0px 1px -0.2px black; */
   align-items: center;
   font-family: "Comforter Brush", cursive;
   font-family: "Dancing Script", cursive;
   font-family: "Fuzzy Bubbles", cursive;
   font-family: "Open Sans Condensed", sans-serif;
-  /* font-style: italic; */
   font-size: 17px;
   width: 48%;
 }
