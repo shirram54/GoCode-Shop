@@ -24,8 +24,9 @@ img {
   margin-right: auto;
 }
 
-.purple {
-  color: #feaebb;
+.yellow {
+  color: rgb(214, 214, 1);
+  font-weight: bolder;
 }
 
 .paragraph {

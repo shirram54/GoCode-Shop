@@ -11,7 +11,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Drawer } from "@mui/material";
 import CartContext from "../../CartContext";
-import { color } from "@mui/system";
 
 function Header({ categories, handleCategoryChange, handlePriceChange }) {
   const [showCart, setShowCart] = useState(false);
@@ -54,22 +53,22 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
     <>
       <div className="top-text">
         {" "}
-        <img
+        {/* <img
           className="instaicon"
           src="https://cdn.shopify.com/s/files/1/0837/2829/files/Group.png?v=1609161773"
           alt="intagram"
-        ></img>
-        GoCode Shop fashion
+        ></img> */}
+        TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS
+        TEZENIS TEZENIS TEZENIS
       </div>
 
       <nav>
-        <h1 className="coteret">GoCode Shop</h1>
+        {/* <h1 className="coteret">Tezenis</h1> */}
 
         <div className="sort">
           <div className="collection-sort">
-            <label>Filter by:</label>
-            <select onChange={handleCategoryChange}>
-              <option value="all"> All </option>
+            <select className="select" onChange={handleCategoryChange}>
+              <option value="all"> View All </option>
               {categories.map((category, i) => (
                 <option key={i} value={category}>
                   {category}
@@ -78,7 +77,7 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
             </select>
           </div>
 
-          <div className="collection-sort">
+          {/* <div className="collection-sort">
             <label>Sort by:</label>
             <select>
               <option value="/">Featured</option>
@@ -90,7 +89,7 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
               <option value="/">Date, new to old</option>
               <option value="/">Date, old to new</option>
             </select>
-          </div>
+          </div> */}
         </div>
 
         <React.Fragment key={"left"}>
@@ -129,7 +128,7 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
       <div className="slide">
         <Box sx={{ width: 350 }}>
           <Slider
-            sx={{ color: "#feaebb" }}
+            sx={{ color: "black" }}
             min={minMax[0]}
             max={minMax[1]}
             getAriaLabel={() => "Price range"}

@@ -5,6 +5,7 @@
   max-width: 1240px;
   margin: 0 auto;
   column-gap: 15px;
+  padding: 1rem 1rem 3rem;
 }
 
 .checkbox {

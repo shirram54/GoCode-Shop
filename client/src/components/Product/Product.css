@@ -5,23 +5,24 @@
   padding: 2%;
   flex: 1 20%;
   background-color: #fff;
-  box-shadow: 0px 0px 1px -0.2px black;
+  /* box-shadow: 0px 0px 1px -0.2px black; */
   align-items: center;
   font-family: "Comforter Brush", cursive;
   font-family: "Dancing Script", cursive;
   font-family: "Fuzzy Bubbles", cursive;
   font-family: "Open Sans Condensed", sans-serif;
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 17px;
+  width: 48%;
 }
 
 .product-image img {
-  height: 190px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-
-  width: 100%;
+  background-color: #f2f2f2;
+  height: 234px;
+  width: 176px;
 }
 
 .product-info {

@@ -10,8 +10,9 @@ function App() {
   return (
     <div>
       <div className="cen">
-        <Link to="/">Home page</Link>
-        <Link to="/about">About our shop</Link>
+        <Link to="/">TEZENIS</Link>
+
+        <Link to="/about">ABOUT US</Link>
       </div>
       <Counter />
       <Routes>
