@@ -4,29 +4,30 @@ function About() {
   return (
     <div className="abocen">
       <h3>
-        WE ARE <span className="yellow">TEZENIS</span>
+        WE ARE <span className="yellow">GoCode Shop</span>
       </h3>
       <p className="paragraph">
-        At Tezenis we bring the most worthwhile items From the right brands and
-        from all over the world.
+        At GoCode Shop we bring the most worthwhile items From the right brands
+        and from all over the world.
         <br />
         <br />
         What is hot today can be worn tomorrow. No need to wait. Do not need
         favors.
         <br />
         <br />
-        Tezenis lands you in the heart of the fashion world. You are welcome to
-        take off. No need to fasten belts.
+        GoCode Shop lands you in the heart of the fashion world. You are welcome
+        to take off. No need to fasten belts.
         <br />
         <br />
         We live in a crazy pace of changing fashion.
         <br />
         <br />
-        Tezenis carefully selects brands and collections From everything the
+        GoCode Shop carefully selects brands and collections From everything the
         fashion world has to offer.
         <br />
         <br />
-        In Tezenis no satisfactions are rejected. Buy today and wear tomorrow.
+        In GoCode Shop no satisfactions are rejected. Buy today and wear
+        tomorrow.
         <br />
         <br />
         The collections change at a fast pace And what's on the site today, is

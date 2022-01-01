@@ -51,8 +51,8 @@ function Header({ categories, handleCategoryChange, handlePriceChange }) {
   return (
     <>
       <div className="top-text">
-        TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS TEZENIS
-        TEZENIS TEZENIS TEZENIS
+        GoCode Shop GoCode Shop GoCode Shop GoCode Shop GoCode Shop GoCode Shop
+        GoCode Shop
       </div>
 
       <nav>

@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <div className="cen">
-        <Link to="/">TEZENIS</Link>
+        <Link to="/">GoCode Shop</Link>
 
         <Link to="/about">ABOUT US</Link>
       </div>
