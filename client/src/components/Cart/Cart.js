@@ -40,7 +40,7 @@ function Cart() {
       <h6> You have {total} products in shopping cart</h6>
       <h6> Total price: ${Math.round(allPrice)} </h6>
       <button className="reset" onClick={() => setCarts(!carts)}>
-        Delete all products from the cart
+        Delete all products from your cart
       </button>
     </div>
   );
